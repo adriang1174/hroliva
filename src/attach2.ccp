@@ -74,12 +74,12 @@
 					<Features/>
 				</TextBox>
 				<FileUpload id="33" fieldSourceType="DBColumn" allowedFileMasks="*" fileSizeLimit="100000" dataType="Text" tempFileFolder="%TEMP" name="FileUpload1" PathID="addFotosFileUpload1" fieldSource="url">
-<Components/>
-<Events/>
-<Attributes/>
-<Features/>
-</FileUpload>
-</Components>
+					<Components/>
+					<Events/>
+					<Attributes/>
+					<Features/>
+				</FileUpload>
+			</Components>
 			<Events/>
 			<TableParameters>
 				<TableParameter id="25" conditionType="Parameter" useIsNull="False" field="idFoto" parameterSource="idFoto" dataType="Integer" logicOperator="And" searchConditionType="Equal" parameterType="URL" orderNumber="1"/>
@@ -107,7 +107,9 @@
 	<CodeFiles>
 		<CodeFile id="Events" language="ASPTemplates" name="attach2_events.asp" forShow="False" comment="'" codePage="windows-1252"/>
 		<CodeFile id="Code" language="ASPTemplates" name="attach2.asp" forShow="True" url="attach2.asp" comment="'" codePage="windows-1252"/>
-	</CodeFiles>
+		<CodeFile id="Events" language="PHPTemplates" name="attach2_events.php" forShow="False" comment="//" codePage="windows-1252"/>
+<CodeFile id="Code" language="PHPTemplates" name="attach2.php" forShow="True" url="attach2.php" comment="//" codePage="windows-1252"/>
+</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
 	<Attributes/>
