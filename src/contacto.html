@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>contacto</title>
+<meta content="CodeCharge Studio 4.00.00.04" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D6831454
+</script>
+<script language="JavaScript" src="ClientI18N.asp?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-6CAFD74E
+function bind_events() {
+    if (functionExists("menu1_bind_events")) menu1_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{menu1}</p>
+<!-- BEGIN Record contacto -->
+<form id="contacto" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+            <td class="th"><strong>Contacto </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="contactonombre">Nombre</label></td> 
+            <td><input id="contactonombre" maxlength="30" size="30" value="{nombre}" name="{nombre_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="contactoemail">Email</label></td> 
+            <td><input id="contactoemail" maxlength="128" size="50" value="{email}" name="{email_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="contactotelefono">Telefono</label></td> 
+            <td><input id="contactotelefono" maxlength="15" size="15" value="{telefono}" name="{telefono_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="contactoconsulta">Consulta</label></td> 
+            <td><textarea id="contactoconsulta" name="{consulta_Name}" rows="3" cols="50">{consulta}</textarea></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="contactoButton_Insert" type="submit" alt="Agregar" value="Enviar" name="{Button_Name}"><!-- END Button Button_Insert --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record contacto --><br>
+</body>
+</html>

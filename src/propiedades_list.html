@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Propiedades</title>
+<meta content="CodeCharge Studio 4.00.00.04" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D6831454
+</script>
+<script language="JavaScript" src="ClientI18N.asp?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-6CAFD74E
+function bind_events() {
+    if (functionExists("menu1_bind_events")) menu1_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{menu1}</p>
+<!-- BEGIN Record propiedadesSearch -->
+<form id="propiedadesSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+            <td class="th"><strong>Buscar</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesSearchs_descripcion">Referencia</label></td> 
+            <td><input id="propiedadesSearchs_descripcion" maxlength="50" size="50" value="{s_descripcion}" name="{s_descripcion_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Tipo</td> 
+            <td>
+              <select id="propiedadesSearchs_tipo" name="{s_tipo_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_tipo_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesSearchs_valor">Valor</label></td> 
+            <td><input id="propiedadesSearchs_valor" maxlength="9" size="9" value="{s_valor}" name="{s_valor_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="propiedadesSearchButton_DoSearch" type="submit" alt="Buscar" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record propiedadesSearch --><br>
+<!-- BEGIN Grid propiedades -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+          <td class="th"><strong>Lista de Propiedades </strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_id --><a href="{Sort_URL}" id="propiedadesSorter_id">Ref</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_id --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_idZona --><a href="{Sort_URL}" id="propiedadesSorter_idZona">Zona</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_idZona --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_idOperacion --><a href="{Sort_URL}" id="propiedadesSorter_idOperacion">Operacion</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_idOperacion --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_idTipo --><a href="{Sort_URL}" id="propiedadesSorter_idTipo">Tipo</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_idTipo --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_descripcion --><a href="{Sort_URL}" id="propiedadesSorter_descripcion">Descripcion</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_descripcion --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_dormitorios --><a href="{Sort_URL}" id="propiedadesSorter_dormitorios">Dormitorios</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_dormitorios --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_valor --><a href="{Sort_URL}" id="propiedadesSorter_valor">Valor</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_valor --></th>
+ 
+          <th scope="col">&nbsp;Moneda</th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_activo --><a href="{Sort_URL}" id="propiedadesSorter_activo">Activo</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_activo --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_orden --><a href="{Sort_URL}" id="propiedadesSorter_orden">Orden</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_orden --></th>
+ 
+          <th scope="col">&nbsp;Fotos</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{id_Src}" id="propiedadesid_{propiedades:rowNumber}">{id}</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{idZona}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{idOperacion}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{idTipo}&nbsp;</td> 
+          <td>{descripcion}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{dormitorios}&nbsp;</td> 
+          <td>{valor}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{moneda}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{activo}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{orden}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right"><a href="{Link1_Src}" id="propiedadesLink1_{propiedades:rowNumber}" target="_blank">Ver</a>&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="11">No hay registros</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="11"><a href="{propiedades_Insert_Src}" id="propiedadespropiedades_Insert">Agregar Nuevo</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a><!-- END First_On -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a><!-- END Prev_On -->&nbsp;{Page_Number} de&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a><!-- END Next_On -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a><!-- END Last_On --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid propiedades --><br>
+</body>
+</html>

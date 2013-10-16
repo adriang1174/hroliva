@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Login</title>
+<meta content="CodeCharge Studio 4.00.00.04" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D6831454
+</script>
+<script language="JavaScript" src="ClientI18N.asp?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//_OnLoad @1-2F43613D
+function _OnLoad()
+{
+    var result;
+//End _OnLoad
+
+//Set Focus @7-D20FE9BF
+    if (document.forms["Login"] && document.forms["Login"].login) document.forms["Login"].login.focus();
+//End Set Focus
+
+//Close _OnLoad @1-BC33A33A
+    return result;
+}
+//End Close _OnLoad
+
+//bind_events @1-B4BAE7CE
+function bind_events() {
+    addEventHandler("", "load", _OnLoad);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<div align="center">
+  <!-- BEGIN Record Login -->
+  <div align="left">
+    <form id="Login" name="{HTMLFormName}" action="{Action}" method="post">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+                <td class="th"><strong>Login</strong></td> 
+                <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td>
+              </tr>
+            </table>
+ 
+            <table class="Record" cellspacing="0" cellpadding="0">
+              <!-- BEGIN Error -->
+              <tr class="Error">
+                <td colspan="2">{Error}</td>
+              </tr>
+              <!-- END Error -->
+              <tr class="Controls">
+                <td class="th"><label for="Loginlogin">Login</label></td> 
+                <td><input id="Loginlogin" maxlength="100" value="{login}" name="{login_Name}" size="20"></td>
+              </tr>
+ 
+              <tr class="Controls">
+                <td class="th"><label for="Loginpassword">Password</label></td> 
+                <td><input id="Loginpassword" type="password" maxlength="100" value="{password}" name="{password_Name}" size="20"></td>
+              </tr>
+ 
+              <tr class="Bottom">
+                <td align="right" colspan="2">
+                  <!-- BEGIN Button Button_DoLogin --><input class="Button" id="LoginButton_DoLogin" type="submit" alt="Login" value="Login" name="{Button_Name}"><!-- END Button Button_DoLogin --></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div align="left">
+  </div>
+  <!-- END Record Login -->
+</div>
+</body>
+</html>

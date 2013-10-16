@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>.: HR OLIVA PROPIEDADES :..................................</title>
+<meta content="CodeCharge Studio 4.00.00.04" name="GENERATOR">
+<style>
+A:link {color: #FFFFFF}
+</style>
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet"></head>
+<body bottommargin="0" vlink="#ffffff" alink="#ffffff" link="#ffffff" leftmargin="0" background="images/img000.gif" topmargin="0" rightmargin="0">
+<div align="left">
+  &nbsp;
+</div>
+<div align="center">
+  <table id="table1" style="BORDER-COLLAPSE: collapse" height="100%" cellpadding="0" width="872" border="0">
+    <tr>
+      <td valign="top">
+        <table id="table2" style="BORDER-COLLAPSE: collapse" height="100%" cellpadding="0" width="100%" border="0">
+          <tr>
+            <td align="center" height="81">
+              <table id="table7" style="BORDER-COLLAPSE: collapse" cellpadding="0" width="100%" border="0">
+                <tr>
+                  <td width="182" bgcolor="#ffffff">
+                    <embed src="../logo001.swf" height="81px" width="183px"></td> 
+                  <td><img border="0" src="images/img014.gif" width="690" height="81"></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td align="center" height="117">
+              <table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" id="table8">
+                <tr>
+                  <td bgcolor="#FFFFFF"><img border="0" src="images/img022.jpg" width="390" height="117"><img border="0" src="images/img023.jpg" width="372" height="117"></td> 
+                  <td width="111">
+                    <p align="center"><img border="0" src="images/img008.gif" width="111" height="117"></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td align="center" height="100%" valign="top">
+              <table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" id="table3" height="100%">
+                <tr>
+                  <td valign="top" width="181" align="center" background="images/img009.gif">
+                    <table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" id="table4">
+                      <tr>
+                        <td height="24" background="images/img010.gif">
+                          <p style="margin-left: 22px; margin-right: 22px" align="left"><font face="Tahoma" style="font-size: 9pt" color="#FFFFFF"><a href="../quienesomos.htm" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#B3DAFD'" onmouseout="this.style.color='#FFFFFF'">Quienes<span style="font-weight: 700"></span>Somos</a></font></td> 
+                      </tr>
+ 
+                      <tr>
+                        <td height="24" background="images/img011.gif">
+                          <p style="margin-left: 22px; margin-right: 22px" align="right"><font face="Tahoma" style="font-size: 9pt; font-weight:700" color="#FFFFFF">Propiedades</font></td> 
+                      </tr>
+ 
+                      <tr>
+                        <td height="24" background="images/img010.gif">
+                          <p style="margin-left: 22px; margin-right: 22px" align="left"><font face="Tahoma" style="font-size: 9pt" color="#FFFFFF"><a href="../tasaciones.htm" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#B3DAFD'" onmouseout="this.style.color='#FFFFFF'" >Tasaciones</a></font></td> 
+                      </tr>
+ 
+                      <tr>
+                        <td height="24" background="images/img010.gif">
+                          <p style="margin-left: 22px; margin-right: 22px" align="left"><font face="Tahoma" style="font-size: 9pt" color="#FFFFFF"><a href="../servicios.htm" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#B3DAFD'" onmouseout="this.style.color='#FFFFFF'">Servicios</a></font></td> 
+                      </tr>
+ 
+                      <tr>
+                        <td height="24" background="images/img010.gif">
+                          <p style="margin-left: 22px; margin-right: 22px"><font face="Tahoma" style="font-size: 9pt" color="#FFFFFF"><a href="mailto:inmobiliaria@hrolivapropiedades.com.ar" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#B3DAFD'" onmouseout="this.style.color='#FFFFFF'">Contáctenos</a></font></td> 
+                      </tr>
+ 
+                    </table>
+ </td> 
+ <td valign="top" align="center" background="images/img013.gif" width="580" height="350">
+ <div align="center">
+<!-- BEGIN Record propiedades -->
+<form id="propiedades" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong><font size="2">Buscar propiedades</font> </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4"><font size="1">{Error}</font></td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="propiedadess_idZona"><font size="2">Zona</font></label></td> 
+            <td colspan="3">
+              <select id="propiedadess_idZona" style="WIDTH: 210px" name="{s_idZona_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_idZona_Options}
+              </select>
+ <font size="1"></font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadess_idOperacion"><font size="2">Operacion</font></label></td> 
+            <td colspan="3">
+              <select id="propiedadess_idOperacion" style="WIDTH: 209px" name="{s_idOperacion_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_idOperacion_Options}
+              </select>
+ <font size="1"></font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadess_idTipo"><font size="2">Tipo</font></label></td> 
+            <td colspan="3">
+              <select id="propiedadess_idTipo" style="WIDTH: 210px" name="{s_idTipo_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_idTipo_Options}
+              </select>
+ <font size="1"></font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadess_dormitorios"><font size="2">Dormitorios</font></label></td> 
+            <td colspan="3">
+              <select id="propiedadess_dormitorios" name="{s_dormitorios_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_dormitorios_Options}
+              </select>
+ <font size="1"></font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadess_idMoneda"><font size="2">Moneda</font></label></td> 
+            <td colspan="3">
+              <select id="propiedadess_idMoneda" name="{s_idMoneda_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_idMoneda_Options}
+              </select>
+ <font size="1"></font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadess_valor"><font size="2">Valor desde</font></label></td> 
+            <td>
+              <p align="left">
+              <select id="propiedadess_valor" name="{s_valor_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_valor_Options}
+              </select>
+              </p>
+            </td> 
+            <td><label for="propiedadess_valor"><font size="2">Valor hasta</font></label>&nbsp;</td> 
+            <td>&nbsp; 
+              <select id="propiedadess_valorhasta" style="WIDTH: 144px" name="{s_valorhasta_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_valorhasta_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="propiedadesButton_DoSearch" type="submit" alt="Buscar" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record propiedades -->
+</div>
+</td>
+<br>
+                  <td valign="top" align="center" width="111" background="images/img012.gif"><img border="0" src="images/img012.gif" width="111" height="10"></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td align="center" height="24" background="images/img002.gif">
+              <table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" id="table6">
+                <tr>
+                  <td width="179"></td> 
+                  <td>
+                    <p align="center"><font face="Tahoma" style="font-size: 8pt; letter-spacing: 2px" color="#FFFFFF">Argerich 1334 (5 esq.) | CPAB1686KTB | Hurlingham | T.4662-6371/4236 | <a href="mailto:inmobiliaria@hrolivapropiedades.com.ar" style="text-decoration: none">e-mail</a></font></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</div>
+<div align="center">
+</div>
+</body>
+</html>

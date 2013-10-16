@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>attach</title>
+<meta content="CodeCharge Studio 4.00.00.04" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+function DeleteAttachment(thisURL)
+{
+  if (confirm("Confirma que desea borrar la imagen?")) {
+      document.location = thisURL.href;
+  }
+}
+
+function CloseWindowAndReload()
+{
+var DomYes=document.getElementById?1:0;
+
+  window.opener.focus();
+
+  //Read the values from PopUp Window
+  if (DomYes) {
+    var myTABLE = document.getElementById("ListOfFiles");
+  } else {
+    var myTABLE = ListOfFiles;
+  }
+
+  var RowCnt = myTABLE.rows.length;
+  var CellsValue = new Array();
+
+  //Check that 'NoRecords' block is NOT shown
+  if (myTABLE.rows[1].cells.length > 1) {
+        for(var i=1; i<RowCnt; i++) {
+        var myrow = myTABLE.rows[i];
+        CellsValue[i] = new Array(myrow.cells[0].innerHTML,
+                                                myrow.cells[1].innerHTML);
+     }
+  }
+  window.close();
+
+  //Set values to the parent table
+  if (DomYes) {
+    var openerTABLE = window.opener.document.getElementById("AttachedFiles");
+  } else {
+    var openerTABLE = window.opener.AttachedFiles;
+  }
+
+  //Delete all rows in the parent table (exclude last with add link)
+  var RowCnt = openerTABLE.rows.length;
+  for (var i=RowCnt-2; i>=0; i--) {
+      openerTABLE.deleteRow(i);
+  }
+
+  for (var i = 0; i<CellsValue.length-1; i++) {
+       var LastRow = openerTABLE.insertRow(i);
+           var Cell1 = LastRow.insertCell(0);
+       Cell1.innerHTML = CellsValue[i+1][0];
+  }
+}
+</script>
+</head>
+<body>
+<p>&nbsp;</p>
+<!-- BEGIN Grid fotos -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+          <td class="th"><strong>Fotos</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_descripcion --><a href="{Sort_URL}" id="fotosSorter_descripcion">Descripcion</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Simple/Images/Asc.gif" border="0" width="11" height="7"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Simple/Images/Desc.gif" border="0" width="11" height="7"><!-- END Desc_On --><!-- END Sorter Sorter_descripcion --></th>
+ 
+          <th scope="col">Foto</th>
+ 
+          <th scope="col">&nbsp;Borrar</th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{descripcion}&nbsp;</td> 
+          <td><img id="fotosurl_{fotos:rowNumber}" alt="" src="images/{url}">&nbsp;</td> 
+          <td>&nbsp;<a href="{Link1_Src}" id="fotosLink1_{fotos:rowNumber}" onclick="DeleteAttachment(this);return false;">Borrar</a></td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">No hay registros</td> 
+        </tr>
+ <!-- END NoRecords -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid fotos --><br>
+<!-- BEGIN Record NewRecord1 -->
+<form id="NewRecord1" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+            <td class="th"><strong>Agregar Fotos </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="NewRecord1url">Url</label></td> 
+            <td>
+              <!-- BEGIN FileUpload FileUpload1 --><input id="NewRecord1FileUpload1ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><label for="NewRecord1FileUpload1FileControl" style="display: none;">File upload</label><input id="NewRecord1FileUpload1FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl --><label for="NewRecord1FileUpload1DeleteControl">Borrar</label><input id="NewRecord1FileUpload1DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="NewRecord1descripcion">Descripcion</label></td> 
+            <td><input id="NewRecord1descripcion" maxlength="50" size="50" value="{descripcion}" name="{descripcion_Name}"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="NewRecord1Button_Insert" type="submit" alt="Agregar" value="Agregar" name="{Button_Name}"><!-- END Button Button_Insert --><input id="NewRecord1id" type="hidden" value="{id}" name="{id_Name}"></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record NewRecord1 --><br>
+<br>
+<br>
+&nbsp; 
+</body>
+</html>

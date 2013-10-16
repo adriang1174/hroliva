@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>propiedades_maint2</title>
+<meta content="CodeCharge Studio 4.00.00.04" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D6831454
+</script>
+<script language="JavaScript" src="ClientI18N.asp?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//propiedadesButton_Delete_OnClick @6-FD005DAD
+function propiedadesButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End propiedadesButton_Delete_OnClick
+
+//bind_events @1-9BF246D6
+function bind_events() {
+    if (functionExists("menu1_bind_events")) menu1_bind_events();
+    addEventHandler("propiedadesButton_Delete", "click", propiedadesButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{menu1}</p>
+<br>
+<!-- BEGIN Record propiedades -->
+<form id="propiedades" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+            <td class="th"><strong>Agregar/Editar Propiedades </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0" width="1" height="1"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesid">Ref</label></td> 
+            <td><input id="propiedadesid" maxlength="10" size="10" value="{id}" name="{id_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesidZona">Zona</label></td> 
+            <td>
+              <select id="propiedadesidZona" name="{idZona_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+ {idZona_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesidOperacion">Operacion</label></td> 
+            <td>
+              <select id="propiedadesidOperacion" name="{idOperacion_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+ {idOperacion_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesidTipo">Tipo</label></td> 
+            <td>
+              <select id="propiedadesidTipo" name="{idTipo_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+ {idTipo_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesdescripcion">Descripcion</label></td> 
+            <td><textarea id="propiedadesdescripcion" style="WIDTH: 424px; HEIGHT: 149px" name="{descripcion_Name}" rows="7" cols="50">{descripcion}</textarea></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesdormitorios">Dormitorios</label></td> 
+            <td><input id="propiedadesdormitorios" maxlength="10" size="10" value="{dormitorios}" name="{dormitorios_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesvalor">Valorpara mostrar</label></td> 
+            <td><input id="propiedadesvalor" maxlength="50" size="50" value="{valor}" name="{valor_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesvalor_num">Valor real</label></td> 
+            <td><input id="propiedadesvalor_num" style="WIDTH: 326px; HEIGHT: 22px" maxlength="12" size="39" value="{valor_num}" name="{valor_num_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesidMoneda">Moneda</label></td> 
+            <td>
+              <select id="propiedadesidMoneda" name="{idMoneda_Name}">
+                <option value="" selected>Seleccionar Valor</option>
+ {idMoneda_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesactivo">Activo</label></td> 
+            <td><input id="propiedadesactivo" type="checkbox" value="1" name="{activo_Name}" {activo}></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="propiedadesorden">Orden</label></td> 
+            <td><input id="propiedadesorden" maxlength="10" size="10" value="{orden}" name="{orden_Name}"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="propiedadesButton_Insert" type="submit" alt="Agregar" value="Agregar" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="propiedadesButton_Update" type="submit" alt="Enviar" value="Enviar" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="propiedadesButton_Delete" type="submit" alt="Borrar" value="Borrar" name="{Button_Name}"><!-- END Button Button_Delete --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record propiedades --><br>
+</body>
+</html>
