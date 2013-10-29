@@ -7,7 +7,7 @@
 	}
 
 .FormTitleBgColor {
-	background-color: #3d84cc;
+	background-color: #660000;
 	}
 
 .FormTitleFontColor {
@@ -47,7 +47,7 @@
 	}
 
 .ColorBgButton {
-	background-color: #3d84cc;
+	background-color: #660000;
 }
 
 .ColorFontButton {
@@ -125,42 +125,42 @@ form {
 	}
 
 h1	{
-	color: #3d84cc;
+	color: #660000;
 	font-size: 150%;
 	margin-top: 5px; 
 	margin-bottom: 5px;
 	}
 
 h2	{ 
-	color: #3d84cc;
+	color: #660000;
 	font-size: 130%;
 	margin-top: 15px; 
 	margin-bottom: 5px; 
 	}
 
 h3	{ 
-	color: #3d84cc;
+	color: #660000;
 	font-size: 110%; font-style: italic;
 	margin-top: 15px; 
 	margin-bottom: 5px; 
 	}
 
 h4	{ 
-	color: #3d84cc;
+	color: #660000;
 	font-size: 100%;
 	margin-top: 15px; 
 	margin-bottom: 5px; 
 	}
 
 h5	{ 
-	color: #3d84cc;
+	color: #660000;
 	font-size: 100%; font-style: italic;
 	margin-top: 15px; 
 	margin-bottom: 5px; 
 	}
 
 h6	{ 
-	color: #3d84cc;
+	color: #660000;
 	font-size: 90%;
 	margin-top: 15px; 
 	margin-bottom: 5px; 
@@ -195,7 +195,7 @@ html>body input, html>body select, html>body textarea {
 .Header th { 
 	font-size: 110%; font-weight: bold; text-align: left;
 	padding: 3px;
-	background-color: #3d84cc; color: #ffffff;
+	background-color: #660000; color: #ffffff;
 	width: 100%;
 	white-space: nowrap;
 	padding-left: 8px;
@@ -245,14 +245,14 @@ html>body .Header th {
 
 /* Grid Options */
 .Grid { 
-	border-left: 1px solid #3d84cc; border-bottom: 1px solid #3d84cc;
+	border-left: 1px solid #660000; border-bottom: 1px solid #660000;
 	width: 100%;
 	}
 
 .Caption th { 
 	font-size: 80%; 	text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #dfdfdf; color: #000000;
 	white-space: nowrap;
 	}
@@ -260,7 +260,7 @@ html>body .Header th {
 .Caption td { 
 	font-size: 80%; 	text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #dfdfdf; color: #000000;
 	white-space: nowrap;
 	}
@@ -301,7 +301,7 @@ html>body .Caption th, html>body .Caption td {
 .Row th { 
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #f7f7f7; color: #000000;
 	white-space: nowrap;
 	color: #000000;
@@ -310,7 +310,7 @@ html>body .Caption th, html>body .Caption td {
 .Row td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	vertical-align: top;
 	background-color: #f7f7f7; 
@@ -332,7 +332,7 @@ html>body .Row th, html>body .Row td {
 caption.Row { 
 	font-size: 80%;
 	padding: 3px;
-	border: 1px solid #3d84cc; border-bottom: 0px;
+	border: 1px solid #660000; border-bottom: 0px;
 	text-align: left;
 	vertical-align: top;
 	background-color: #f7f7f7; 
@@ -364,7 +364,7 @@ html>body caption.Row {
 	}
 
 .Separator{
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .Separator td{
@@ -375,7 +375,7 @@ html>body caption.Row {
 .AltRow th { 
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #f7f7f7; color: #000000;
 	white-space: nowrap;
 	color: #000000;
@@ -384,7 +384,7 @@ html>body caption.Row {
 .AltRow td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	vertical-align: top;
 	background-color: #ebf2f8; 
@@ -418,7 +418,7 @@ html>body .AltRow th, html>body .AltRow td {
 .NoRecords td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	background-color: #f7f7f7; 
 	color: #000000;
@@ -428,7 +428,7 @@ html>body .AltRow th, html>body .AltRow td {
 .Footer td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #f7f7f7; color: #000000;
 	text-align: center;
 	vertical-align: middle;
@@ -449,7 +449,7 @@ html>body .NoRecords td, html>body .Footer td {
 /*end*/
 
 .Footer a:link { 
-	color: #0059b2;
+	color: #660000;
 	}
 
 .Footer a:visited { 
@@ -472,14 +472,14 @@ html>body .NoRecords td, html>body .Footer td {
 
 /* Record Options */
 .Record { 
-	border-left: 1px solid #3d84cc; border-bottom: 1px solid #3d84cc;
+	border-left: 1px solid #660000; border-bottom: 1px solid #660000;
 	width: 100%;
 	}
 
 .Error td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	color: #FF0000;
 	vertical-align: top;
@@ -501,7 +501,7 @@ html>body .NoRecords td, html>body .Footer td {
 .Controls th { 
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #f7f7f7; color: #000000;
 	white-space: nowrap;
 	color: #000000;
@@ -510,7 +510,7 @@ html>body .NoRecords td, html>body .Footer td {
 .Controls td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	vertical-align: top;
 	background-color: #f7f7f7; 
@@ -520,10 +520,10 @@ html>body .NoRecords td, html>body .Footer td {
 .Controls2 td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	vertical-align: top;
-	background-color: #90BFEA; 
+	background-color: rgb(195, 195, 195); 
 	color: #000000;
 	}
 	
@@ -531,7 +531,7 @@ html>body .NoRecords td, html>body .Footer td {
 .Bottom td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #f7f7f7; color: #000000;
 	text-align: right;
 	vertical-align: middle;
@@ -542,8 +542,8 @@ html>body .NoRecords td, html>body .Footer td {
 .Bottom2 td { 
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #90BFEA; color: #000000;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
+	background-color: rgb(195, 195, 195); color: #000000;
 	text-align: right;
 	vertical-align: middle;
 	white-space: nowrap;
@@ -587,7 +587,7 @@ html>body .Controls th, html>body .Controls td, html>body .Bottom td {
 .GroupCaption th{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	white-space: nowrap;
 	text-align: left;
 	vertical-align: top;
@@ -599,7 +599,7 @@ html>body .Controls th, html>body .Controls td, html>body .Bottom td {
 .GroupCaption td{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	vertical-align: top;
 	font-weight: bold;
@@ -634,7 +634,7 @@ html>body .GroupCaption th, html>body .GroupCaption td {
 .GroupFooter td{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: center;
 	vertical-align: middle;
 	white-space: nowrap;
@@ -679,13 +679,13 @@ html>body .GroupFooter td {
 .SubTotal td{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	vertical-align: top;
 	font-weight: bold;
 	background-color: #ebf2f8; 
 	color: #000000;
-	border-bottom: 2px solid #3d84cc;
+	border-bottom: 2px solid #660000;
 	}
 
 
@@ -715,7 +715,7 @@ html>body .SubTotal td {
 .Total td{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	vertical-align: top;
 	white-space: nowrap;
@@ -750,20 +750,20 @@ html>body .Total td {
 
 /* Form Options */
 .Button { 
-	background-color: #3d84cc; color: #ffffff; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-size: 85%; font-family: Tahoma;
+	background-color: #660000; color: #ffffff; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-size: 85%; font-family: Tahoma;
 	}
 
 /* Calendar */
 
 .Calendar { 
-	border: 1px solid #3d84cc;
+	border: 1px solid #660000;
 	width: 100%;
 	}
 
 .CalendarWeekdayName{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: center; 
 	vertical-align: top;
 	white-space: nowrap;
@@ -799,7 +799,7 @@ html>body .CalendarWeekdayName {
 .CalendarWeekendName{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	white-space: nowrap;
 	text-align: center; 
 	vertical-align: top;
@@ -836,7 +836,7 @@ html>body .CalendarWeekendName {
 .CalendarDay{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: center;
 	background-color: #f7f7f7;	
 	color: #000000;
@@ -870,7 +870,7 @@ html>body .CalendarDay {
 .CalendarWeekend{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: center;
 	background-color: #ebf2f8;	
 	color: #000000;
@@ -904,7 +904,7 @@ html>body .CalendarWeekend {
 .CalendarToday {
 	font-size: 80%;
 	padding: 1px;
-	border-top: 3px solid #3d84cc; border-right: 3px solid #3d84cc; border-left: 2px solid #3d84cc; border-bottom: 2px solid #3d84cc;
+	border-top: 3px solid #660000; border-right: 3px solid #660000; border-left: 2px solid #660000; border-bottom: 2px solid #660000;
 	text-align: center;
 	background-color: #f7f7f7;	
 	color: #000000;
@@ -938,7 +938,7 @@ html>body .CalendarToday {
 .CalendarWeekendToday {
 	font-size: 80%;
 	padding: 1px;
-	border-top: 3px solid #3d84cc; border-right: 3px solid #3d84cc; border-left: 2px solid #3d84cc; border-bottom: 2px solid #3d84cc;
+	border-top: 3px solid #660000; border-right: 3px solid #660000; border-left: 2px solid #660000; border-bottom: 2px solid #660000;
 	text-align: center;
 	background-color: #ebf2f8;	
 	color: #000000;
@@ -972,10 +972,10 @@ html>body .CalendarWeekendToday {
 .CalendarOtherMonthDay{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: center;
 	background-color: #f7f7f7;	
-	color: #3d84cc;
+	color: #660000;
 	}
 
 
@@ -991,11 +991,11 @@ html>body .CalendarOtherMonthDay {
 /*end*/
 
 .CalendarOtherMonthDay a:link {
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .CalendarOtherMonthDay a:visited{
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .CalendarOtherMonthDay a:hover, .CalendarOtherMonthDay a:active{
@@ -1006,10 +1006,10 @@ html>body .CalendarOtherMonthDay {
 .CalendarOtherMonthToday {
 	font-size: 80%;
 	padding: 1px;
-	border-top: 3px solid #3d84cc; border-right: 3px solid #3d84cc; border-left: 2px solid #3d84cc; border-bottom: 2px solid #3d84cc;
+	border-top: 3px solid #660000; border-right: 3px solid #660000; border-left: 2px solid #660000; border-bottom: 2px solid #660000;
 	text-align: center;
 	background-color: #f7f7f7;	
-	color: #3d84cc;
+	color: #660000;
 	}
 
 
@@ -1025,11 +1025,11 @@ html>body .CalendarOtherMonthToday {
 /*end*/
 
 .CalendarOtherMonthToday a:link {
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .CalendarOtherMonthToday a:visited{
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .CalendarOtherMonthToday a:hover,.CalendarOtherMonthToday a:active{
@@ -1040,10 +1040,10 @@ html>body .CalendarOtherMonthToday {
 .CalendarOtherMonthWeekend {
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: center;
 	background-color: #ebf2f8;	
-	color: #3d84cc;
+	color: #660000;
 	}
 
 
@@ -1059,11 +1059,11 @@ html>body .CalendarOtherMonthWeekend {
 /*end*/
 
 .CalendarOtherMonthWeekend a:link {
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .CalendarOtherMonthWeekend a:visited{
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .CalendarOtherMonthWeekend a:hover, .CalendarOtherMonthWeekend a:active{
@@ -1074,9 +1074,9 @@ html>body .CalendarOtherMonthWeekend {
 .CalendarOtherMonthWeekendToday {
 	font-size: 80%;
 	padding: 1px;
-	border-top: 3px solid #3d84cc; border-right: 3px solid #3d84cc; border-left: 2px solid #3d84cc; border-bottom: 2px solid #3d84cc;
+	border-top: 3px solid #660000; border-right: 3px solid #660000; border-left: 2px solid #660000; border-bottom: 2px solid #660000;
 	text-align: center;
-	color: #3d84cc;
+	color: #660000;
 	background-color: #ebf2f8;	
 	}
 	
@@ -1093,11 +1093,11 @@ html>body .CalendarOtherMonthWeekendToday {
 /*end*/
 
 .CalendarOtherMonthWeekendToday a:link {
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .CalendarOtherMonthWeekendToday a:visited{
-	color: #3d84cc;
+	color: #660000;
 	}
 
 .CalendarOtherMonthWeekendToday a:hover, .CalendarOtherMonthWeekendToday a:active{
@@ -1108,7 +1108,7 @@ html>body .CalendarOtherMonthWeekendToday {
 .CalendarSelectedDay{
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #dfdfdf;
 	color: #000000;
 	text-align: center;
@@ -1255,14 +1255,14 @@ html>body .th {
 .Header .th { 
 	font-size: 110%; font-weight: bold; text-align: left;
 	padding: 3px;
-	background-color: #3d84cc; color: #ffffff;
+	background-color: #660000; color: #ffffff;
 	width: 100%;
 	white-space: nowrap;
 }
 
 
 html>body .Header .th {
-	font-size: 140%; font-weight: bold; text-align: left;
+	font-size: 120%; font-weight: bold; text-align: left;
 }
 
 
@@ -1275,7 +1275,7 @@ html>body .Header .th {
 .Caption .th { 
 	font-size: 80%; 	text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #dfdfdf; color: #000000;
 	white-space: nowrap;
 }
@@ -1295,7 +1295,7 @@ html>body .Caption .th {
 .Row .th { 
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #f7f7f7; color: #000000;
 	white-space: nowrap;
 	color: #000000;
@@ -1304,7 +1304,7 @@ html>body .Caption .th {
 .AltRow .th { 
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #f7f7f7; color: #000000;
 	white-space: nowrap;
 	color: #000000;
@@ -1313,7 +1313,7 @@ html>body .Caption .th {
 .Controls .th { 
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	background-color: #f7f7f7; color: #000000;
 	white-space: nowrap;
 	color: #000000;
@@ -1322,7 +1322,7 @@ html>body .Caption .th {
 .GroupCaption .th {
 	font-size: 80%;
 	padding: 3px;
-	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	border-top: 1px solid #660000; border-right: 1px solid #660000;
 	text-align: left;
 	white-space: nowrap;
 	vertical-align: top;

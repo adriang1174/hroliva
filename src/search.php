@@ -175,7 +175,7 @@ function GetPrimaryKey($keyName)
 }
 //End MasterDetail
 
-//Operation Method @11-4CF560CB
+//Operation Method @11-C84B2A90
     function Operation()
     {
         if(!$this->Visible)
@@ -197,7 +197,7 @@ function GetPrimaryKey($keyName)
         $Redirect = "record.php";
         if($this->Validate()) {
             if($this->PressedButton == "Button_DoSearch") {
-                $Redirect = "record.asp" . "?" . CCMergeQueryStrings(CCGetQueryString("Form", array("Button_DoSearch", "Button_DoSearch_x", "Button_DoSearch_y")));
+                $Redirect = "record.php" . "?" . CCMergeQueryStrings(CCGetQueryString("Form", array("Button_DoSearch", "Button_DoSearch_x", "Button_DoSearch_y")));
                 if(!CCGetEvent($this->Button_DoSearch->CCSEvents, "OnClick", $this->Button_DoSearch)) {
                     $Redirect = "";
                 }

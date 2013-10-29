@@ -98,14 +98,14 @@
 		<CodeFile id="MenuWCHScript" language="ASPTemplates" name="WCH.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="20EABDE1"/>
 		<CodeFile id="YUIDragDropMin" language="ASPTemplates" name="dragdrop-min.js" path="js\yui\build\dragdrop" forShow="False" comment="//" codePage="windows-1252" CheckSum="7313465F"/>
 		<CodeFile id="CaptchaCCS" language="PHPTemplates" name="captcha.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="3197B15E"/>
-<CodeFile id="YUITabViewCoreCss" language="PHPTemplates" name="tabview-core.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="73EE3885"/>
-<CodeFile id="MenuWCHScript" language="PHPTemplates" name="WCH.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="20EABDE1"/>
-<CodeFile id="YUIDragDropMin" language="PHPTemplates" name="dragdrop-min.js" path="js\yui\build\dragdrop" forShow="False" comment="//" codePage="windows-1252" CheckSum="7313465F"/>
-</CodeFiles>
+		<CodeFile id="YUITabViewCoreCss" language="PHPTemplates" name="tabview-core.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="73EE3885"/>
+		<CodeFile id="MenuWCHScript" language="PHPTemplates" name="WCH.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="20EABDE1"/>
+		<CodeFile id="YUIDragDropMin" language="PHPTemplates" name="dragdrop-min.js" path="js\yui\build\dragdrop" forShow="False" comment="//" codePage="windows-1252" CheckSum="7313465F"/>
+	</CodeFiles>
 	<Groups>
 		<Group id="3" name="Usuario" value="10"/>
-		<Group id="4" name="Admin" value="100"/>
-	</Groups>
+<Group id="4" name="Admin" value="100"/>
+</Groups>
 	<Styles>
 		<Style id="2" name="Simple" caption="Simple"/>
 	</Styles>

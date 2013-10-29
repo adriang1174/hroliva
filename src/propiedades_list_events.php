@@ -37,11 +37,74 @@ function propiedades_BeforeShowRow(& $sender)
     $Container = & CCGetParentContainer($sender);
     global $propiedades; //Compatibility
 //End propiedades_BeforeShowRow
-
 //Custom Code @43-2A29BDB7
-// -------------------------
-    // Write your own code here.
-// -------------------------
+//Zona
+$conn = new clsDBConnection1();
+$sql = "SELECT descripcion FROM zonas WHERE idZona = " . $propiedades->idZona->GetValue();
+$conn->query($sql);
+$conn->next_record();
+$propiedades->idZona->SetValue($conn->f('descripcion'));
+//Operacion
+$sql = "SELECT descripcion FROM operaciones WHERE idZona = " . $propiedades->idOperacion->GetValue();
+$conn->query($sql);
+$conn->next_record();
+$propiedades->idZona->SetValue($conn->f('descripcion'));
+//Tipo
+$sql = "SELECT descripcion FROM tipo_propiedad WHERE idTipo = " . $propiedades->idTipo->GetValue();
+$conn->query($sql);
+$conn->next_record();
+$propiedades->idTipo->SetValue($conn->f('descripcion'));
+//Moneda
+$sql = "SELECT descripcion FROM moneda WHERE idMoneda = " . $propiedades->moneda->GetValue();
+$conn->query($sql);
+$conn->next_record();
+$propiedades->moneda->SetValue($conn->f('descripcion'));
+$conn->close();
+/* / -------------------------
+ +Dim SQL
++Dim rs
++'---Zona
++SQL = "SELECT descripcion FROM zonas WHERE idZona = " & propiedades.idZona.value
++Set rs = DBConnection1.Execute(SQL)
++If DBConnection1.Errors.Count = 0 Then
++	if NOT rs.EOF then
++	  propiedades.idZona.value =  rs("descripcion")
++	end if
++	rs.Close
++	set rs = Nothing
++end if
++'---Operacion
++SQL = "SELECT descripcion FROM operaciones WHERE idOperacion = " & propiedades.idOperacion.value
++Set rs = DBConnection1.Execute(SQL)
++If DBConnection1.Errors.Count = 0 Then
++	if NOT rs.EOF then
++	  propiedades.idOperacion.value =  rs("descripcion")
++	end if
++	rs.Close
++	set rs = Nothing
++end if
++'---Tipo
++SQL = "SELECT descripcion FROM tipo_propiedad WHERE idTipo = " & propiedades.idTipo.value
++Set rs = DBConnection1.Execute(SQL)
++If DBConnection1.Errors.Count = 0 Then
++	if NOT rs.EOF then
++	  propiedades.idTipo.value =  rs("descripcion")
++	end if
++	rs.Close
++	set rs = Nothing
++end if
++'---Tipo
++SQL = "SELECT descripcion FROM moneda WHERE idMoneda = " & propiedades.moneda.value
++Set rs = DBConnection1.Execute(SQL)
++If DBConnection1.Errors.Count = 0 Then
++	if NOT rs.EOF then
++	  propiedades.moneda.value =  rs("descripcion")
++	end if
++	rs.Close
++	set rs = Nothing
++end if
++' -------------------------
+*/
 //End Custom Code
 
 //Close propiedades_BeforeShowRow @6-E06366FE

@@ -1,4 +1,4 @@
-//JS Functions @0-CB069D22
+//JS Functions @0-9440AD6B
 var isNN = (navigator.appName.indexOf("Netscape") != -1);
 var isIE = (navigator.appName.indexOf("Microsoft") != -1);
 var IEVersion = (isIE ? getIEVersion() : 0);
@@ -618,10 +618,23 @@ function check_and_bind(element,event,func,iterate_id) {
   }
 }
 
-function getElement(elementId, rowNumber) {
+function getElement(elementId, rowNumber, existingElement) {
   var control = document.getElementById(elementId);
   if (control == null) {
     control = document.getElementById(elementId + "_" + rowNumber);
+  }
+  if (control == null)
+  {
+    var controlName = elementId;
+    if (existingElement && existingElement.form && existingElement.form.id && controlName.indexOf(existingElement.form.id) == 0)
+      controlName = controlName.replace(existingElement.form.id, "");
+    var controls = document.getElementsByName(controlName);
+    for (var i = 0; i < controls.length; i++)
+      if (controls[i].checked == true)
+      {
+        control = controls[i];
+        break;
+      }
   }
   return control;
 }
@@ -639,7 +652,7 @@ function getSameLevelCtl(elementName, existingElement) {
   if (existingElement != null && existingElement['id'] != null) {
     rowNumber = getRowFromId(existingElement.id);
   }
-  return getElement(elementName, rowNumber);
+  return getElement(elementName, rowNumber, existingElement);
 }
 
 function addEventHandler(elementId, event, handler) {
@@ -649,12 +662,16 @@ function addEventHandler(elementId, event, handler) {
     var rowElementId = rowNum > 0 ? elementId + "_" + rowNum : elementId;
     var element = document.getElementById(rowElementId);
     if (element != null) {
-      var handlerWithSender = function() {
-        if (window.event) {
-          handler.apply(window.event.srcElement, [window.event.srcElement]);
-        } else {
-          handler.apply(this, [this]);
-        }
+      var handlerWithSender = function(evt) {
+          var ret = true;
+          if (window.event) {
+              ret = handler.apply(window.event.srcElement, [window.event.srcElement]);
+              window.event.returnValue = ret;
+          } else {
+              ret = handler.apply(this, [this]);
+              if (evt && !ret) evt.preventDefault();
+          }
+          return ret;
       };
       if (event == "load") {
         handler.apply(element, [element]);
@@ -722,7 +739,7 @@ function CCGetParam(strParamName) {
     var strQueryString = strHref.substr(strHref.indexOf("?")).toLowerCase();
     var aQueryString = strQueryString.split("&");
     for ( var iParam = 0; iParam < aQueryString.length; iParam++ ) {
-      if (aQueryString[iParam].indexOf(strParamName + "=") > -1 ) {
+      if (aQueryString[iParam].indexOf(strParamName.toLowerCase() + "=") > -1 ) {
         var aParam = aQueryString[iParam].split("=");
         strReturn = aParam[1];
         break;
@@ -801,6 +818,47 @@ function CCAddParam(location, paramName, paramValue) {
         .replace(new RegExp('[&]?' + paramName + '=[^&]*', 'gi'), '')
         .replace(/\?/, '?' + paramName + '=' + paramValue + '&')
         .replace(/[&]+$/m, '');
+}
+
+function isIncluded(href1, href2)
+{
+    if (href1 == null || href2 == null)
+        return href1 == href2;
+    if (href1.indexOf("?") == -1 || href1.split("?")[1] == "")
+        return href1.split("?")[0] == href2.split("?")[0];
+    if (href2.indexOf("?") == -1 || href2.split("?")[1] == "")
+        return href1.replace("?","") == href2.replace("?","");
+    if (href1.split("?")[0] != href2.split("?")[0])
+        return false;
+    var params = href1.split("?")[1];
+    params = params.split("&");
+    var i,par1,par2,nv;
+    par1 = new Array();
+    for (i in params)
+    {
+        if (typeof(params[i]) == "function")
+            continue;
+        nv = params[i].split("=");
+        if (nv[0]!="FormFilter")
+            par1[nv[0]] = nv[1];
+    }
+    params = href2.split("?")[1];
+    params = params.split("&");
+    par2 = new Array();
+    for (i in params)
+    {
+        if (typeof(params[i]) == "function")
+            continue;
+        nv = params[i].split("=");
+        if (nv[0]!="FormFilter")
+            par2[nv[0]] = nv[1];
+    }
+    /*if (par1.length != par2.length)
+        return false;*/
+    for (i in par1)
+        if (par1[i]!=par2[i])
+            return false;
+    return true;
 }
 
 

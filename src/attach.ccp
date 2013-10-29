@@ -73,7 +73,7 @@
 					<Attributes/>
 					<Features/>
 				</TextBox>
-				<FileUpload id="29" fieldSourceType="DBColumn" allowedFileMasks="*.jpg;*.gif" fileSizeLimit="1200000" dataType="Text" tempFileFolder="%TEMP" name="FileUpload1" PathID="NewRecord1FileUpload1" fieldSource="url" processedFileFolder="d:\www\docs\users\hrolivapropiedades.com.ar\search\images">
+				<FileUpload id="29" fieldSourceType="DBColumn" allowedFileMasks="*.jpg;*.gif" fileSizeLimit="1200000" dataType="Text" tempFileFolder="%TEMP" name="FileUpload1" PathID="NewRecord1FileUpload1" fieldSource="url" processedFileFolder="images">
 					<Components/>
 					<Events/>
 					<Attributes/>

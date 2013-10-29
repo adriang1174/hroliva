@@ -2,7 +2,7 @@
 	<Components>
 		<Record id="11" sourceType="Table" urlType="Relative" secured="False" allowInsert="False" allowUpdate="False" allowDelete="False" validateData="True" preserveParameters="None" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="propiedades" wizardCaption=" Propiedades Buscar" wizardOrientation="Vertical" wizardFormMethod="post" returnPage="record.ccp" PathID="propiedades" pasteAsReplace="pasteAsReplace">
 			<Components>
-				<Button id="12" urlType="Relative" enableValidation="True" isDefault="False" name="Button_DoSearch" operation="Search" wizardCaption="Buscar" PathID="propiedadesButton_DoSearch" returnPage="record.asp">
+				<Button id="12" urlType="Relative" enableValidation="True" isDefault="False" name="Button_DoSearch" operation="Search" wizardCaption="Buscar" PathID="propiedadesButton_DoSearch" returnPage="record.php">
 					<Components/>
 					<Events/>
 					<Attributes/>

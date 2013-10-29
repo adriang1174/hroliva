@@ -187,7 +187,7 @@ html>body input, html>body select, html>body textarea {
 .Header th { 
 	font-size: 110%; font-weight: bold; text-align: left;
 	padding: 3px;
-	background-color: #3d84cc; color: #ffffff;
+	background-color: #9B0000; color: #ffffff;
 	width: 100%;
 	white-space: nowrap;
 	padding-left: 8px;
@@ -241,7 +241,7 @@ html>body input, html>body select, html>body textarea {
 	font-size: 80%; 	text-align: left; vertical-align: top;
 	padding: 3px;
 	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #dfdfdf; color: #000000;
+	background-color: #9B0000 color: #000000;
 	white-space: nowrap;
 	}
 
@@ -286,7 +286,7 @@ html>body input, html>body select, html>body textarea {
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
 	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #f7f7f7; color: #000000;
+	background-color: #9B0000; color: #000000;
 	white-space: nowrap;
 	color: #000000;
 	}
@@ -352,7 +352,7 @@ caption.Row {
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
 	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #f7f7f7; color: #000000;
+	background-color: #9B0000; color: #000000;
 	white-space: nowrap;
 	color: #000000;
 	}
@@ -466,7 +466,7 @@ caption.Row {
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
 	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #f7f7f7; color: #000000;
+	background-color: #9B0000; color: #000000;
 	white-space: nowrap;
 	color: #000000;
 	}
@@ -1118,7 +1118,7 @@ table tr td strong {
 .Header .th { 
 	font-size: 110%; font-weight: bold; text-align: left;
 	padding: 3px;
-	background-color: #3d84cc; color: #ffffff;
+	background-color: #9B0000; color: #ffffff;
 	width: 100%;
 	white-space: nowrap;
 }
@@ -1135,7 +1135,7 @@ table tr td strong {
 	font-size: 80%; 	text-align: left; vertical-align: top;
 	padding: 3px;
 	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #dfdfdf; color: #000000;
+	background-color: #9B0000; color: #000000;
 	white-space: nowrap;
 }
 
@@ -1151,7 +1151,7 @@ table tr td strong {
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
 	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #f7f7f7; color: #000000;
+	background-color: #9B0000; color: #000000;
 	white-space: nowrap;
 	color: #000000;
 }
@@ -1160,7 +1160,7 @@ table tr td strong {
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
 	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #f7f7f7; color: #000000;
+	background-color: #9B0000; color: #000000;
 	white-space: nowrap;
 	color: #000000;
 }
@@ -1169,7 +1169,7 @@ table tr td strong {
 	font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
 	padding: 3px;
 	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
-	background-color: #f7f7f7; color: #000000;
+	background-color: #9B0000; color: #000000;
 	white-space: nowrap;
 	color: #000000;
 }

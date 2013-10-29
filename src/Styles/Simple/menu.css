@@ -7,20 +7,20 @@
 /* end hide/show blocks */
 
 .menu_htb a {
-	background-color: #3d84cc;
+	background-color: #660000;
 	
 	height: auto;
 	width: auto;
 }
 
 .menu_htb a:hover, .menu_htb li:hover>a, ul.menu_htb .selected a {
-	background-color: #0c4c8e;
+	background-color: #9B0000;
 	
 }
 
 /* <= ie6 */
 .menu_htb a:hover, .menu_htb .adxmhoverA, ul.menu_htb .selected a {		/* li:hover>a selector */
-	background-color: #0c4c8e;
+	background-color: #9B0000;
 	
 }
 
@@ -138,18 +138,18 @@ html:first-child .menu_htb ul .text { /* Opera */
 ul.menu_htb ul li a, ul.menu_htb .selected ul li a { 
 	width: 100%;
 	height: auto;
-	background-color: #3d84cc;
+	background-color: #660000;
 	
 }
 
 .menu_htb ul a:hover, .menu_htb ul li:hover>a, ul.menu_htb .selected ul a:hover, ul.menu_htb .selected ul li:hover>a {
-	background-color: #0c4c8e;
+	background-color: #9B0000;
 	
 }
 
 /* <= ie6 */
 .menu_htb ul a:hover, .menu_htb ul .adxmhoverA, ul.menu_htb .selected ul a:hover, ul.menu_htb .selected ul .adxmhoverA {
-	background-color: #0c4c8e;
+	background-color: #9B0000;
 	
 }
 

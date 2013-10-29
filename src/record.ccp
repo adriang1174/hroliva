@@ -65,12 +65,12 @@
 							<Features/>
 						</Hidden>
 						<Hidden id="99" fieldSourceType="DBColumn" dataType="Float" name="valor_num" PathID="propiedadesRowComponentsvalor_num" fieldSource="valor_num">
-<Components/>
-<Events/>
-<Attributes/>
-<Features/>
-</Hidden>
-</Components>
+							<Components/>
+							<Events/>
+							<Attributes/>
+							<Features/>
+						</Hidden>
+					</Components>
 					<Events/>
 					<Attributes/>
 					<Features/>
@@ -133,7 +133,7 @@
 				<Field id="95" tableName="propiedades" fieldName="activo"/>
 				<Field id="96" tableName="propiedades" fieldName="orden"/>
 				<Field id="98" tableName="propiedades" fieldName="valor_num"/>
-</Fields>
+			</Fields>
 			<SPParameters/>
 			<SQLParameters>
 				<SQLParameter id="57" parameterType="URL" variable="s_idZona" dataType="Integer" parameterSource="s_idZona" defaultValue="0"/>

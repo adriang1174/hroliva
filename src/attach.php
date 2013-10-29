@@ -296,7 +296,7 @@ class clsRecordNewRecord1 { //NewRecord1 Class @23-D7EDAFB1
     // Class variables
 //End Variables
 
-//Class_Initialize Event @23-CDC42501
+//Class_Initialize Event @23-F2610FD6
     function clsRecordNewRecord1($RelativePath, & $Parent)
     {
 
@@ -327,7 +327,7 @@ class clsRecordNewRecord1 { //NewRecord1 Class @23-D7EDAFB1
             $this->id = & new clsControl(ccsHidden, "id", "Id", ccsInteger, "", CCGetRequestParam("id", $Method, NULL), $this);
             $this->id->Required = true;
             $this->descripcion = & new clsControl(ccsTextBox, "descripcion", "Descripcion", ccsText, "", CCGetRequestParam("descripcion", $Method, NULL), $this);
-            $this->FileUpload1 = & new clsFileUpload("FileUpload1", "FileUpload1", "%TEMP", "d:/www/docs/users/hrolivapropiedades.com.ar/search/images/", "*.jpg;*.gif", "", 1200000, $this);
+            $this->FileUpload1 = & new clsFileUpload("FileUpload1", "FileUpload1", "%TEMP", "images/", "*.jpg;*.gif", "", 1200000, $this);
         }
     }
 //End Class_Initialize Event
