@@ -1,6 +1,6 @@
 <Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Simple" wizardThemeVersion="3.0" needGeneration="0">
 	<Components>
-		<Record id="11" sourceType="Table" urlType="Relative" secured="False" allowInsert="False" allowUpdate="False" allowDelete="False" validateData="True" preserveParameters="None" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="propiedades" wizardCaption=" Propiedades Buscar" wizardOrientation="Vertical" wizardFormMethod="post" returnPage="record.ccp" PathID="propiedades" pasteAsReplace="pasteAsReplace">
+		<Record id="11" sourceType="Table" urlType="Relative" secured="False" allowInsert="False" allowUpdate="False" allowDelete="False" validateData="True" preserveParameters="None" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="propiedades" wizardCaption=" Propiedades Buscar" wizardOrientation="Vertical" wizardFormMethod="post" returnPage="record.ccp" PathID="propiedades" pasteAsReplace="pasteAsReplace" pasteActions="pasteActions">
 			<Components>
 				<Button id="12" urlType="Relative" enableValidation="True" isDefault="False" name="Button_DoSearch" operation="Search" wizardCaption="Buscar" PathID="propiedadesButton_DoSearch" returnPage="record.asp">
 					<Components/>
@@ -92,6 +92,12 @@
 					<Attributes/>
 					<Features/>
 				</ListBox>
+				<TextBox id="20" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_ref" PathID="propiedadess_ref">
+					<Components/>
+					<Events/>
+					<Attributes/>
+					<Features/>
+				</TextBox>
 			</Components>
 			<Events/>
 			<TableParameters/>

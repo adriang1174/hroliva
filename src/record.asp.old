@@ -1,17 +1,16 @@
 <%@ CodePage=1252 %>
 <%
-'Include Common Files @1-81E36C68
+'Include Common Files @1-1E030DF9
 %>
 <!-- #INCLUDE VIRTUAL="/search/Common.asp"-->
 <!-- #INCLUDE VIRTUAL="/search/Cache.asp" -->
 <!-- #INCLUDE VIRTUAL="/search/Template.asp" -->
 <!-- #INCLUDE VIRTUAL="/search/Sorter.asp" -->
 <!-- #INCLUDE VIRTUAL="/search/Navigator.asp" -->
-<!-- #INCLUDE VIRTUAL="/search/Services.asp" -->
 <%
 'End Include Common Files
 
-'Initialize Page @1-A15E2E77
+'Initialize Page @1-3E536F06
 ' Variables
 Dim PathToRoot, ScriptPath, TemplateFilePath
 Dim FileName
@@ -31,7 +30,6 @@ Dim DBConnection1
 
 ' Page controls
 Dim propiedades
-Dim menu1
 Dim ChildControls
 
 Response.ContentType = CCSContentType
@@ -45,7 +43,7 @@ ScriptPath = Left(Request.ServerVariables("PATH_TRANSLATED"), Len(Request.Server
 TemplateFilePath = ScriptPath
 'End Initialize Page
 
-'Initialize Objects @1-11B434BE
+'Initialize Objects @1-BD775FC5
 BindEvents "Page"
 CCSEventResult = CCRaiseEvent(CCSEvents, "BeforeInitialize", Nothing)
 
@@ -56,9 +54,6 @@ Attributes("pathToRoot") = PathToRoot
 
 ' Controls
 Set propiedades = New clsGridpropiedades
-Set menu1 = New clsmenu1
-Set menu1.Attributes = Attributes
-menu1.Initialize "menu1", ""
 propiedades.Initialize DBConnection1
 
 ' Events
@@ -69,10 +64,6 @@ BindEvents Empty
 
 CCSEventResult = CCRaiseEvent(CCSEvents, "AfterInitialize", Nothing)
 'End Initialize Objects
-
-'Execute Components @1-92318C89
-menu1.Operations
-'End Execute Components
 
 'Go to destination page @1-6D35F4FD
 If NOT ( Redirect = "" ) Then
@@ -91,10 +82,10 @@ Set Tpl = HTMLTemplate.Block("main")
 CCSEventResult = CCRaiseEvent(CCSEvents, "BeforeShow", Nothing)
 'End Initialize HTML Template
 
-'Show Page @1-E0EDFD0F
+'Show Page @1-FAA3E4B7
 Attributes.Show HTMLTemplate, "page:"
 Set ChildControls = CCCreateCollection(Tpl, Null, ccsParseOverwrite, _
-    Array(propiedades, menu1))
+    Array(propiedades))
 ChildControls.Show
 Dim MainHTML
 HTMLTemplate.Parse "main", False
@@ -109,7 +100,7 @@ Set Tpl = Nothing
 Set HTMLTemplate = Nothing
 'End Unload Page
 
-'UnloadPage Sub @1-056786CF
+'UnloadPage Sub @1-ABAD9C4F
 Sub UnloadPage()
     CCSEventResult = CCRaiseEvent(CCSEvents, "BeforeUnload", Nothing)
     If DBConnection1.State = adStateOpen Then _
@@ -118,13 +109,12 @@ Sub UnloadPage()
     Set CCSEvents = Nothing
     Set Attributes = Nothing
     Set propiedades = Nothing
-    Set menu1 = Nothing
 End Sub
 'End UnloadPage Sub
 
 Class clsGridpropiedades 'propiedades Class @2-1018A140
 
-'propiedades Variables @2-339CDEC9
+'propiedades Variables @2-16C8ADF8
 
     ' Private variables
     Private VarPageSize
@@ -152,13 +142,16 @@ Class clsGridpropiedades 'propiedades Class @2-1018A140
     Dim valor
     Dim id
     Dim Image1
+    Dim descripcion
     Dim operacion
     Dim tipo
+    Dim idPropiedad
+    Dim valor_num
     Dim RowCloseTag
     Dim Navigator
 'End propiedades Variables
 
-'propiedades Class_Initialize Event @2-608173E4
+'propiedades Class_Initialize Event @2-EDFDBCAA
     Private Sub Class_Initialize()
         ComponentName = "propiedades"
         Visible = True
@@ -196,14 +189,17 @@ Class clsGridpropiedades 'propiedades Class @2-1018A140
         Set zona = CCCreateControl(ccsLabel, "zona", Empty, ccsText, Empty, CCGetRequestParam("zona", ccsGet))
         Set dormitorios = CCCreateControl(ccsLabel, "dormitorios", Empty, ccsInteger, Empty, CCGetRequestParam("dormitorios", ccsGet))
         Set valor = CCCreateControl(ccsLabel, "valor", Empty, ccsText, Empty, CCGetRequestParam("valor", ccsGet))
-        Set id = CCCreateControl(ccsLabel, "id", Empty, ccsInteger, Empty, CCGetRequestParam("id", ccsGet))
+        Set id = CCCreateControl(ccsLabel, "id", Empty, ccsText, Empty, CCGetRequestParam("id", ccsGet))
         Set Image1 = CCCreateControl(ccsImage, "Image1", Empty, ccsText, Empty, CCGetRequestParam("Image1", ccsGet))
+        Set descripcion = CCCreateControl(ccsLabel, "descripcion", Empty, ccsText, Empty, CCGetRequestParam("descripcion", ccsGet))
         Set operacion = CCCreateControl(ccsLabel, "operacion", Empty, ccsText, Empty, CCGetRequestParam("operacion", ccsGet))
         Set tipo = CCCreateControl(ccsLabel, "tipo", Empty, ccsText, Empty, CCGetRequestParam("tipo", ccsGet))
+        Set idPropiedad = CCCreateControl(ccsHidden, "idPropiedad", Empty, ccsText, Empty, CCGetRequestParam("idPropiedad", ccsGet))
+        Set valor_num = CCCreateControl(ccsHidden, "valor_num", Empty, ccsFloat, Empty, CCGetRequestParam("valor_num", ccsGet))
         Set RowCloseTag = CCCreatePanel("RowCloseTag")
-        Set Navigator = CCCreateNavigator(ComponentName, "Navigator", FileName, 10, tpSimple)
+        Set Navigator = CCCreateNavigator(ComponentName, "Navigator", FileName, 10, tpCentered)
         Navigator.PageSizes = Array("1", "5", "10", "25", "50")
-        RowComponents.AddComponents(Array(zona,dormitorios,valor,id,Image1,operacion,tipo))
+        RowComponents.AddComponents(Array(zona,dormitorios,valor,id,Image1,descripcion,operacion,tipo,idPropiedad,valor_num))
     IsDSEmpty = True
     End Sub
 'End propiedades Class_Initialize Event
@@ -228,7 +224,7 @@ Class clsGridpropiedades 'propiedades Class @2-1018A140
     End Sub
 'End propiedades Class_Terminate Event
 
-'propiedades Show Method @2-117CDB4B
+'propiedades Show Method @2-FF826503
     Sub Show(Tpl)
         Dim HasNext
         If NOT Visible Then Exit Sub
@@ -275,8 +271,11 @@ Class clsGridpropiedades 'propiedades Class @2-1018A140
                     valor.Value = Recordset.Fields("valor")
                     id.Value = Recordset.Fields("id")
                     
+                    descripcion.Value = Recordset.Fields("descripcion")
                     operacion.Value = Recordset.Fields("operacion")
                     tipo.Value = Recordset.Fields("tipo")
+                    idPropiedad.Value = Recordset.Fields("idPropiedad")
+                    valor_num.Value = Recordset.Fields("valor_num")
                 End If
                 CCSEventResult = CCRaiseEvent(CCSEvents, "BeforeShowRow", Me)
                 Attributes.Show TemplateBlock.Block("Row"), "propiedades:"
@@ -321,7 +320,7 @@ End Class 'End propiedades Class @2-A61BA892
 
 Class clspropiedadesDataSource 'propiedadesDataSource Class @2-B58C0B7E
 
-'DataSource Variables @2-F6C77711
+'DataSource Variables @2-3744C671
     Public Errors, Connection, Parameters, CCSEvents
 
     Public Recordset
@@ -344,11 +343,14 @@ Class clspropiedadesDataSource 'propiedadesDataSource Class @2-B58C0B7E
     Public dormitorios
     Public valor
     Public id
+    Public descripcion
     Public operacion
     Public tipo
+    Public idPropiedad
+    Public valor_num
 'End DataSource Variables
 
-'DataSource Class_Initialize Event @2-56717C5E
+'DataSource Class_Initialize Event @2-42C1AC56
     Private Sub Class_Initialize()
 
         Set CCSEvents = CreateObject("Scripting.Dictionary")
@@ -361,23 +363,31 @@ Class clspropiedadesDataSource 'propiedadesDataSource Class @2-B58C0B7E
         Set zona = CCCreateField("zona", "zonas_descripcion", ccsText, Empty, Recordset)
         Set dormitorios = CCCreateField("dormitorios", "dormitorios", ccsInteger, Empty, Recordset)
         Set valor = CCCreateField("valor", "valor", ccsText, Empty, Recordset)
-        Set id = CCCreateField("id", "id", ccsInteger, Empty, Recordset)
+        Set id = CCCreateField("id", "id", ccsText, Empty, Recordset)
+        Set descripcion = CCCreateField("descripcion", "descripcion", ccsText, Empty, Recordset)
         Set operacion = CCCreateField("operacion", "operaciones_descripcion", ccsText, Empty, Recordset)
         Set tipo = CCCreateField("tipo", "tipo_propiedad_descripcion", ccsText, Empty, Recordset)
-        Fields.AddFields Array(zona, dormitorios, valor, id, operacion, tipo)
+        Set idPropiedad = CCCreateField("idPropiedad", "idPropiedad", ccsText, Empty, Recordset)
+        Set valor_num = CCCreateField("valor_num", "valor_num", ccsFloat, Empty, Recordset)
+        Fields.AddFields Array(zona, dormitorios, valor, id, descripcion, operacion, tipo, idPropiedad, valor_num)
 
-        SQL = "SELECT TOP {SqlParam_endRecord} propiedades.*, zonas.descripcion AS zonas_descripcion, operaciones.descripcion AS operaciones_descripcion, tipo_propiedad.descripcion AS tipo_propiedad_descripcion  " & vbLf & _
-        "FROM ((propiedades INNER JOIN zonas ON " & vbLf & _
+        SQL = "SELECT TOP {SqlParam_endRecord} zonas.descripcion AS zonas_descripcion, operaciones.descripcion AS operaciones_descripcion, tipo_propiedad.descripcion AS tipo_propiedad_descripcion, " & vbLf & _
+        "moneda.descripcion AS moneda_descripcion, idPropiedad, id, propiedades.idZona AS propiedades_idZona, propiedades.idOperacion AS propiedades_idOperacion, " & vbLf & _
+        "propiedades.idTipo AS propiedades_idTipo, propiedades.descripcion AS descripcion, dormitorios, valor AS valor, propiedades.idMoneda AS propiedades_idMoneda, " & vbLf & _
+        "activo, orden, valor_num  " & vbLf & _
+        "FROM (((propiedades INNER JOIN zonas ON " & vbLf & _
         "propiedades.idZona = zonas.idZona) INNER JOIN operaciones ON " & vbLf & _
         "propiedades.idOperacion = operaciones.idOperacion) INNER JOIN tipo_propiedad ON " & vbLf & _
-        "propiedades.idTipo = tipo_propiedad.idTipo {SQL_Where} {SQL_OrderBy}"
+        "propiedades.idTipo = tipo_propiedad.idTipo) INNER JOIN moneda ON " & vbLf & _
+        "propiedades.idMoneda = moneda.idMoneda {SQL_Where} {SQL_OrderBy}"
         CountSQL = "SELECT COUNT(*) " & vbLf & _
-        "FROM ((propiedades INNER JOIN zonas ON " & vbLf & _
+        "FROM (((propiedades INNER JOIN zonas ON " & vbLf & _
         "propiedades.idZona = zonas.idZona) INNER JOIN operaciones ON " & vbLf & _
         "propiedades.idOperacion = operaciones.idOperacion) INNER JOIN tipo_propiedad ON " & vbLf & _
-        "propiedades.idTipo = tipo_propiedad.idTipo"
+        "propiedades.idTipo = tipo_propiedad.idTipo) INNER JOIN moneda ON " & vbLf & _
+        "propiedades.idMoneda = moneda.idMoneda"
         Where = ""
-        Order = "propiedades.orden"
+        Order = "orden"
         StaticOrder = ""
     End Sub
 'End DataSource Class_Initialize Event
@@ -429,12 +439,6 @@ Class clspropiedadesDataSource 'propiedadesDataSource Class @2-B58C0B7E
 'End DataSource Class_Terminate Event
 
 End Class 'End propiedadesDataSource Class @2-A61BA892
-
-'Include Page Implementation @76-F9BD05CE
-%>
-<!-- #INCLUDE VIRTUAL="/search/menu1.asp" -->
-<%
-'End Include Page Implementation
 
 
 %>

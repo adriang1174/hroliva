@@ -1,6 +1,6 @@
 <%@ CodePage=1252 %>
 <%
-'Include Common Files @1-1E030DF9
+'Include Common Files @1-D08CF8BA
 %>
 <!-- #INCLUDE VIRTUAL="/search/Common.asp"-->
 <!-- #INCLUDE VIRTUAL="/search/Cache.asp" -->
@@ -10,11 +10,12 @@
 <%
 'End Include Common Files
 
-'Initialize Page @1-96F5BC0C
+'Initialize Page @1-F8AD5C39
 ' Variables
 Dim PathToRoot, ScriptPath, TemplateFilePath
 Dim FileName
 Dim Redirect
+Dim IsService
 Dim Tpl, HTMLTemplate
 Dim TemplateFileName
 Dim ComponentName
@@ -33,6 +34,7 @@ Dim propiedades
 Dim ChildControls
 
 Response.ContentType = CCSContentType
+IsService = False
 Redirect = ""
 TemplateFileName = "search.html"
 Set CCSEvents = CreateObject("Scripting.Dictionary")
@@ -78,14 +80,14 @@ Set Tpl = HTMLTemplate.Block("main")
 CCSEventResult = CCRaiseEvent(CCSEvents, "BeforeShow", Nothing)
 'End Initialize HTML Template
 
-'Show Page @1-FAA3E4B7
+'Show Page @1-BADC7C80
 Attributes.Show HTMLTemplate, "page:"
 Set ChildControls = CCCreateCollection(Tpl, Null, ccsParseOverwrite, _
     Array(propiedades))
 ChildControls.Show
 Dim MainHTML
 HTMLTemplate.Parse "main", False
-MainHTML = HTMLTemplate.GetHTML("main")
+If IsEmpty(MainHTML) Then MainHTML = HTMLTemplate.GetHTML("main")
 CCSEventResult = CCRaiseEvent(CCSEvents, "BeforeOutput", Nothing)
 If CCSEventResult Then Response.Write MainHTML
 'End Show Page
@@ -110,7 +112,7 @@ End Sub
 
 Class clsRecordpropiedades 'propiedades Class @11-806FCECF
 
-'propiedades Variables @11-9C43BB0C
+'propiedades Variables @11-4C64D850
 
     ' Public variables
     Public ComponentName
@@ -145,9 +147,10 @@ Class clsRecordpropiedades 'propiedades Class @11-806FCECF
     Dim s_idMoneda
     Dim s_valor
     Dim s_valorhasta
+    Dim s_ref
 'End propiedades Variables
 
-'propiedades Class_Initialize Event @11-C75B368E
+'propiedades Class_Initialize Event @11-7F8F8251
     Private Sub Class_Initialize()
 
         Visible = True
@@ -204,8 +207,9 @@ Class clsRecordpropiedades 'propiedades Class @11-806FCECF
         s_valorhasta.TextColumn = "valor"
         Set s_valorhasta.DataSource = CCCreateDataSource(dsTable,DBConnection1, Array("SELECT *  " & _
 "FROM rango_valor {SQL_Where} {SQL_OrderBy}", "", ""))
+        Set s_ref = CCCreateControl(ccsTextBox, "s_ref", Empty, ccsText, Empty, CCGetRequestParam("s_ref", Method))
         Set ValidatingControls = new clsControls
-        ValidatingControls.addControls Array(s_idZona, s_idOperacion, s_idTipo, s_dormitorios, s_idMoneda, s_valor, s_valorhasta)
+        ValidatingControls.addControls Array(s_idZona, s_idOperacion, s_idTipo, s_dormitorios, s_idMoneda, s_valor, s_valorhasta, s_ref)
     End Sub
 'End propiedades Class_Initialize Event
 
@@ -250,7 +254,7 @@ Class clsRecordpropiedades 'propiedades Class @11-806FCECF
     End Sub
 'End propiedades Operation Method
 
-'propiedades Show Method @11-C57364A6
+'propiedades Show Method @11-54694540
     Sub Show(Tpl)
 
         If NOT Visible Then Exit Sub
@@ -262,7 +266,7 @@ Class clsRecordpropiedades 'propiedades Class @11-806FCECF
         TemplateBlock.Variable("HTMLFormName") = ComponentName
         TemplateBlock.Variable("HTMLFormEnctype") ="application/x-www-form-urlencoded"
         Set Controls = CCCreateCollection(TemplateBlock, Null, ccsParseOverwrite, _
-            Array(s_idZona, s_idOperacion, s_idTipo, s_dormitorios, s_idMoneda, s_valor, s_valorhasta, Button_DoSearch))
+            Array(s_idZona, s_idOperacion, s_idTipo, s_dormitorios, s_idMoneda, s_valor, s_valorhasta, s_ref, Button_DoSearch))
         If Not FormSubmitted Then
         End If
         If FormSubmitted Then
@@ -273,6 +277,7 @@ Class clsRecordpropiedades 'propiedades Class @11-806FCECF
             Errors.AddErrors s_idMoneda.Errors
             Errors.AddErrors s_valor.Errors
             Errors.AddErrors s_valorhasta.Errors
+            Errors.AddErrors s_ref.Errors
             With TemplateBlock.Block("Error")
                 .Variable("Error") = Errors.ToString()
                 .Parse False
@@ -292,3 +297,4 @@ End Class 'End propiedades Class @11-A61BA892
 
 
 %>
+

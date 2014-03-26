@@ -1,6 +1,6 @@
 <%@ CodePage=1252 %>
 <%
-'Include Common Files @1-1E030DF9
+'Include Common Files @1-D08CF8BA
 %>
 <!-- #INCLUDE VIRTUAL="/search/Common.asp"-->
 <!-- #INCLUDE VIRTUAL="/search/Cache.asp" -->
@@ -43,7 +43,7 @@ ScriptPath = Left(Request.ServerVariables("PATH_TRANSLATED"), Len(Request.Server
 TemplateFilePath = ScriptPath
 'End Initialize Page
 
-'Initialize Objects @1-BD775FC5
+'Initialize Objects @1-435CACC1
 BindEvents "Page"
 CCSEventResult = CCRaiseEvent(CCSEvents, "BeforeInitialize", Nothing)
 
@@ -442,3 +442,5 @@ End Class 'End propiedadesDataSource Class @2-A61BA892
 
 
 %>
+
+

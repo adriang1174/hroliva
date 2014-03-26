@@ -45,11 +45,11 @@ If DBConnection1.Errors.Count = 0 Then
 	set rs = Nothing
 end if
 
-'Si corresponde colocamos "Consulte"
-if propiedades.DataSource.valor_num.Value > 90000 then
-	propiedades.valor.Value = "Consulte"
-	'propiedades.valor.Value = propiedades.DataSource.valor_num.Value
-end if
+'Si corresponde colocamos "Consulte" - Lo sacamos por pesificaci—n
+'if propiedades.DataSource.valor_num.Value > 90000 then
+'	propiedades.valor.Value = "Consulte"
+'	'propiedades.valor.Value = propiedades.DataSource.valor_num.Value
+'end if
 ' -------------------------
 'End Custom Code
 
@@ -61,6 +61,9 @@ Function propiedades_DataSource_BeforeBuildSelect(Sender) 'propiedades_DataSourc
 ' -------------------------
 
 propiedades.DataSource.Where =  "propiedades.activo = 1"
+if CCGetFromGet("s_ref","") <> empty  then
+	propiedades.DataSource.Where = propiedades.DataSource.Where & " AND propiedades.id = '" &CCGetFromGet("s_ref","") & "'"
+end if
 if CCGetFromGet("s_idZona","") <> empty then
 	propiedades.DataSource.Where = propiedades.DataSource.Where & " AND propiedades.idZona =" &CCGetFromGet("s_idZona","")
 end if
@@ -91,7 +94,7 @@ end if
 'Modifico el orden por valor_num
 ' propiedades.DataSource.Order = "convert(varchar,len(valor))+replace(valor,'.','')"
 propiedades.DataSource.Order = "valor_num"
-'response.write propiedades.DataSource.Where
+'response.write propiedades.datasource.sql
 ' -------------------------
 'End Custom Code
 
@@ -104,3 +107,5 @@ End Function 'Close propiedades_DataSource_BeforeBuildSelect @2-54C34B28
 
 
 %>
+
+
